@@ -1,0 +1,52 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    > img {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        > a{
+           &:hover {
+            color: red;
+           }
+        }
+    }  
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.tel-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: #c15454;
+    padding: 12px;
+    > a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+       &:hover {
+        color: black;
+       }
+    }
+    > img {
+       &:hover {
+        color: black;
+       } 
+    }
+}
