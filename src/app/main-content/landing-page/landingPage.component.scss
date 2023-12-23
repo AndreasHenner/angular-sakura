@@ -1,3 +1,9 @@
+@mixin colorStyle($color) {
+    color: $color;
+  }
+  
+
+
 h1 {
     color: white;
     font-size: 64px;
@@ -5,10 +11,11 @@ h1 {
     justify-content: center;
     top: 300px;
     position: relative;
+    @include colorStyle(rgb(255, 255, 255));
 }
 
 h2 {
-    color: white;
+    @include colorStyle(rgb(255, 255, 255));
     display: flex;
     justify-content: center;
     top: 300px;

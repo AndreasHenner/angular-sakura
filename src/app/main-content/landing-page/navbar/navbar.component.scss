@@ -1,7 +1,17 @@
-nav {
+@mixin colorStyle($color) {
+    color: $color;
+  }
+  
+  
+  @mixin dFlex($ai: center) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: $ai;
+  }
+
+
+nav {
+    @include dFlex();
     position: relative;
     top: 20px;
     > img {
@@ -10,8 +20,7 @@ nav {
     }
 
     > div {
-        display: flex;
-        align-items: center;
+        @include dFlex();
         > a{
            &:hover {
             color: red;
@@ -21,23 +30,19 @@ nav {
 }
 
 a {
-    color: white;
+    @include colorStyle(rgb(255, 255, 255));
     text-decoration: none;
     margin-right: 20px;
 }
 
 .tel-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-right: 20px;
     border-radius: 20px;
     border: 2px solid white;
     background-color: #c15454;
     padding: 12px;
     > a {
-        display: flex;
-        align-items: center;
+        @include dFlex($ai: center);
         gap: 10px;
 
        &:hover {
